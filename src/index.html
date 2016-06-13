@@ -69,22 +69,21 @@
 
 
           <div class="col-md-3">
+            <div class="well">
                 <p ui-sref="overview">Overview</p>
                 <p ui-sref="expenses">Expenses</p>
                 <p ui-sref="income">Income</p>
+            </div>
          </div>
-
 
           <div class="col-md-9">
                   <ui-view>
-
 
                   </ui-view>
           </div>
 
         <div class="row">
           <div class="col-md-12" ng-controller="MainController">
-
             <pre>
                 <p>Data (promise testing): {{ data }}</p>
             </pre>
@@ -95,7 +94,7 @@
           <div class="col-md-12">
 
             <app-date>Datepicker</app-date>
-            
+
           </div>
         </div>
 

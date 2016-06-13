@@ -1,0 +1,30 @@
+        <div ng-controller="overviewController" class="panel">
+                      <h3 class="lead">Calculate your savings</h3>
+                      <form class="form-horizontal" role="form">
+
+                          <div class="form-group">
+                              <span class="control-label col-sm-3">Monthly income</span>
+                              <div class="col-sm-4">
+                                  <input ng-model="izplacilo" type="text" class="form-control">
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <span class="control-label col-sm-3">Number of months</span>
+                              <div class="col-sm-4">
+                                  <input ng-model="meseci" type="text" class="form-control">
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <span class="control-label col-sm-3">Monthly rate (%) </span>
+                              <div class="col-sm-4">
+                                  <input ng-model="obrestna_mera" type="text" class="form-control">
+                              </div>
+                          </div>
+                      </form>
+                      <button class="btn btn-default" ng-click="kalkulator_varcevanje(izracun)">Calculate</button>
+                      <div class="col-md-6">
+                          <p>Account balance: {{ izracun | currency: "€ " }} </p>
+              </div>
+        </div>

@@ -13,4 +13,12 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider)
                                     url:'/category',
                                     controller: "expensesController"
                     	          });
+
+                                $stateProvider.state('overview',
+                    	          {
+                    		            templateURL: 'templates/overview.html',
+                                    url:'/category',
+                                    controller: "overviewController"
+                    	          });
+
                              });

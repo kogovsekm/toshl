@@ -16,6 +16,14 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider)
                                     url:'/category',
                                     controller: "expensesController"
                     	          });
+
+                                $stateProvider.state('overview',
+                    	          {
+                    		            templateURL: 'templates/overview.html',
+                                    url:'/category',
+                                    controller: "overviewController"
+                    	          });
+
                              });
 
 angular.module('app').controller('ExpensesController', function($scope, $q, $http){
@@ -32,6 +40,7 @@ angular.module('app').controller('ExpensesController', function($scope, $q, $htt
 
 });
 
+
 angular.module('app').controller('MainController', function($scope, $q, $http){
 
   $scope.data = 'No data';
@@ -44,4 +53,15 @@ angular.module('app').controller('MainController', function($scope, $q, $http){
    alert('Ne deluje! Preveri sintakso pri slikcu na API! Morda je napaka v URL-ju ali nastavitvi headerja!');
   });
 
+});
+
+angular.module("app", []);
+
+angular.module("app").controller("overviewController", function($scope) {
+    $scope.kalkulator_varcevanje = function(izracun) {
+        var izplacilo = $scope.izplacilo;
+        var meseci = $scope.meseci;
+        var obrestna_mera = $scope.obrestna_mera;
+        $scope.izracun = (izplacilo * meseci * obrestna_mera)/ 100;
+    };
 });

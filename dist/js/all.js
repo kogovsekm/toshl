@@ -146,7 +146,7 @@ angular.module('app').directive('appDate', function(){
 
 angular.module('app').controller('ExpensesController', function($scope, $q, $http){
 
-  $scope.data = 'No data';
+  $scope.data = 'Acquiring data';
 
    $http.get('http://toshl-killer.herokuapp.com/api/v1/balance_changes',{params: {query:'test'}}).then(function(success){
     $scope.data = success.data;
@@ -181,7 +181,7 @@ angular.module('app').directive('appIncome', function(){
 
 angular.module('app').controller('MainController', function($scope, $q, $http){
 
-  $scope.data = 'No data';
+  $scope.data = 'Acquiring data';
 
    $http.get('http://toshl-killer.herokuapp.com/api/v1/balance_changes',{params: {query:'test'}}).then(function(success){
     $scope.data = success.data;

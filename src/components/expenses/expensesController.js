@@ -1,6 +1,6 @@
 angular.module('app').controller('ExpensesController', function($scope, $q, $http){
 
-  $scope.data = 'No data';
+  $scope.data = 'Acquiring data';
 
    $http.get('http://toshl-killer.herokuapp.com/api/v1/balance_changes',{params: {query:'test'}}).then(function(success){
     $scope.data = success.data;

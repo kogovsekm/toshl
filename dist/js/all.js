@@ -10,6 +10,13 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider)
 		                                url: 'dist/index.html'
 	                               });
 
+                                 $stateProvider.state('overview',
+                                 {
+                                     templateURL: 'templates/overview.html',
+                                     url:'/overview',
+                                     controller: "overviewController"
+                                 });
+
                                 $stateProvider.state('expenses',
                     	          {
                     		            templateURL: 'templates/expenses.html',
@@ -17,11 +24,11 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider)
                                     controller: "expensesController"
                     	          });
 
-                                $stateProvider.state('overview',
+                                $stateProvider.state('income',
                     	          {
-                    		            templateURL: 'templates/overview.html',
-                                    url:'/overview',
-                                    controller: "overviewController"
+                    		            templateURL: 'templates/income.html',
+                                    url:'/income',
+                                    controller: "incomeController"
                     	          });
 
                              });

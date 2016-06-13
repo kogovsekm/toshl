@@ -28,4 +28,11 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider)
                                     controller: "incomeController"
                     	          });
 
+                                $stateProvider.state('category',
+                                {
+                                url:         '/datepicker',
+                                templateUrl: 'templates/datepicker.html',
+                                controller:  "datepickerController"
+                                });
+
                              });

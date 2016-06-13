@@ -12,21 +12,21 @@ angular.module('app').config(function ($stateProvider, $urlRouterProvider)
 
                                  $stateProvider.state('overview',
                                  {
-                                     templateURL: 'templates/overview.html',
+                                     templateUrl: 'templates/overview.html',
                                      url:'/overview',
                                      controller: "overviewController"
                                  });
 
                                 $stateProvider.state('expenses',
                     	          {
-                    		            templateURL: 'templates/expenses.html',
+                    		            templateUrl: 'templates/expenses.html',
                                     url:'/expenses',
                                     controller: "expensesController"
                     	          });
 
                                 $stateProvider.state('income',
                     	          {
-                    		            templateURL: 'templates/income.html',
+                    		            templateUrl: 'templates/income.html',
                                     url:'/income',
                                     controller: "incomeController"
                     	          });

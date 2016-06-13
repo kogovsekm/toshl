@@ -1,3 +1,12 @@
+.col-md-3 {
+
+    border-color:red !important;
+
+}
+
+.col-md-9 {
+    border-color:red !important;
+}
 
 .transition-example.ng-enter
 {

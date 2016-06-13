@@ -47,12 +47,26 @@ angular.module('app').controller('ExpensesController', function($scope, $q, $htt
 
 });
 
+angular.module('app').directive('appExpenses', function(){
+	return {
+		restrict: 'E',
+		controller: 'expensesController',
+		templateUrl: 'templates/expenses.html'
+	};
+});
 
 angular.module('app').controller('incomeController', function($scope){
 
 
 });
 
+angular.module('app').directive('appIncome', function(){
+	return {
+		restrict: 'E',
+		controller: 'incomeController',
+		templateUrl: 'templates/income.html'
+	};
+});
 
 angular.module('app').controller('MainController', function($scope, $q, $http){
 
@@ -73,3 +87,10 @@ angular.module("app").controller("overviewController", function($scope) {
     
 });
 
+angular.module('app').directive('appOverview', function(){
+	return {
+		restrict: 'E',
+		controller: 'overviewController',
+		templateUrl: 'templates/overview.html'
+	};
+});

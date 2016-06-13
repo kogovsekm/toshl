@@ -1,0 +1,15 @@
+<div ng-controller="categoryController">
+    <!-- Simple dropdown -->
+    <span uib-dropdown on-toggle="toggled(open)">
+     <a href id="simple-dropdown" uib-dropdown-toggle>
+       Izberi kategorijo
+     </a>
+     <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+       <li ng-repeat="choice in items">
+         <a href>{{choice}}</a>
+       </li>
+     </ul>
+   </span>
+</div>
+
+<!-- https://angular-ui.github.io/bootstrap/#/dropdown -->
